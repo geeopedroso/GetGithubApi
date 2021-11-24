@@ -5,12 +5,24 @@ import { FormControl } from '@angular/forms';
 import { merge } from 'rxjs';
 
 const ESPERA_DIGITACAO = 300;
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent {
+
+  private _item: any;
+
+  get item(): any {
+    return this._item;
+  }
+
+  @Input() set item (val: any){
+    this._item = val;
+  }
+
   queryField = new FormControl();
 
   allUsers$ = this.service.getData();
