@@ -1,0 +1,44 @@
+<section class="container">
+  <div class="container search-table">
+    <div class="search-box">
+      <div class="row">
+        <div class="col-md-9">
+          <input
+            type="text"
+            id="myInput"
+            class="form-control"
+            [formControl]="queryField"
+            placeholder="Pesquisar"
+            />
+        </div>
+      </div>
+    </div>
+    <div class="search-list" >
+      <h3>Usuários</h3>
+      <table class="table" id="myTable" *ngIf="users$ |async as users; else listaVazia">
+        <thead>
+          <tr>
+            <th>Avatar</th>
+            <th>Login</th>
+            <th>Perfil</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>
+              <img width="80" height="80" src="{{ user.avatar_url }}" alt="" />
+            </td>
+            <td>{{user.login}}</td>
+            <td>
+              <a href="{{user.html_url}}" target="_blank" >
+                {{ user.html_url }}
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <ng-template  #listaVazia><p>Nenhum Usuário Encontrado</p></ng-template>
+    </div>
+  </div>
+
+</section>

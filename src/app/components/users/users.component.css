@@ -1,0 +1,59 @@
+
+.titulo {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.tabela {
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho {
+  color: var(--primary);
+}
+.conteudo {
+  padding: 10px;
+  border-bottom: 2px solid green;
+}
+
+
+.linha {
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+
+.conteudo {
+  padding: 10px;
+  border-bottom: 1px solid var(--cinza-claro);
+}
+
+
+.search-table{
+  padding: 10%;
+  margin-top: -6%;
+}
+.search-box{
+  /* background: #c1c1c1; */
+  border: 1px solid #ababab;
+  padding: 3%;
+}
+.search-box input:focus{
+  box-shadow:none;
+  border:2px solid #eeeeee;
+}
+.search-list{
+  background: #fff;
+  border: 1px solid #ababab;
+  border-top: none;
+}
+.search-list h3{
+  background: #eee;
+  padding: 3%;
+  margin-bottom: 0%;
+}
+
